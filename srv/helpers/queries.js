@@ -5,7 +5,7 @@ require('dotenv').config();
 //console.log("jwtauth:",process.env.JWTauth);
 
 exports.sapAxiosQuery = async ({method, baseUrl, params = {},  headers = { "content-type": "application/json"},data = {} }) => {
-    // console.log("baseurl",baseUrl)
+     console.log("url",baseUrl)
     try {
       // console.log("los headers en axios: ", headers)
       const resp = await sapAxios({
