@@ -1,6 +1,5 @@
 const express = require("express");
 require('dotenv').config();
-var morgan = require('morgan');
 const xsenv = require("@sap/xsenv");
 xsenv.loadEnv();
 
@@ -9,8 +8,6 @@ const api = require("./routes");
 
 
 app.use(express.json());
-app.use(morgan('combined'));
-
 
 app.use("/api", api);
 
