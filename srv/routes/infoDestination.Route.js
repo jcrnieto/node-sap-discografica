@@ -137,4 +137,22 @@ router.get('/getArticulo', async (req, res) => {
     }
 });
 
+
+// router.get('/getArtist', async (req, res) => {
+     
+//     try {
+//         const response = await sapAxiosQuery({
+//             method: "GET",
+//             baseUrl: `/Artist`,
+//             params: {},
+//         });
+
+//          res.status(200).send(response.data); 
+
+//     } catch (error) {
+//         console.error('Error al conectar destination:', error);
+//         res.status(500).send('Error al conectar destination o al obtener artista.');
+//     }
+// });
+
 module.exports = router;

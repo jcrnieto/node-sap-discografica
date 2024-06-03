@@ -5,30 +5,31 @@
 #   instance: 1
 #   path: srv
 #   routes:
-#   - route: AssistCardSupplierPortalNodejsPrd.cfapps.br10.hana.ondemand.com
+#   - route: https://srv-mediating-shark-ra.cfapps.us10-001.hana.ondemand.com
 #   memory: 512M
 #   timeout: 180
 #   buildpacks:
 #     - nodejs_buildpack
 #   services:
-#     - discografica-capcds-db
-#     - discografica-xsuaa    
+#     - discografica-xsuaa
+#     - destination-service     
 # # Approuter
 # - name: approuter
 #   path: approuter
 #   routes:
-#   - route: AssistCardSupplierPortalRouterPrd.cfapps.br10.hana.ondemand.com
+#   - route: https://srv-mediating-shark-ra.cfapps.us10-001.hana.ondemand.com
 #   memory: 128M
 #   buildpacks:
 #     - nodejs_buildpack
 #   services:
 #     - discografica-xsuaa
+#     - destination-service
 #   env :
 #     destinations: >
 #       [
 #         {
-#           "name": "discografica",
-#           "url":  "https://2a87e965trial-dev-discografica-capcds-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/discography",
+#           "name": "requisitions",
+#           "url":  "https://hexagon-consulting-s-r-l--playground-wibp6lxb-acelerado36f88643.cfapps.us10-001.hana.ondemand.com/creacionRequisitos",
 #           "forwardAuthToken": true
 #         }
 #       ]
@@ -42,4 +43,5 @@ applications:
   buildpacks:
   - nodejs_buildpack
   services:
-  - discografica-xsuaa    
+  - discografica-xsuaa  
+  - destination-service  
